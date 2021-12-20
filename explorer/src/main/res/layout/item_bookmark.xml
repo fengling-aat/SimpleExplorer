@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bookmark_height"
+    android:background="?attr/bookmark_windoBackground"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageButton_remove"
+        android:orientation="horizontal"
+        android:paddingLeft="9dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/desc"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="monospace"
+            android:singleLine="true"
+            android:text="@string/desc"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton_remove"
+        style="?android:attr/actionButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="?attr/action_remove" />
+
+</RelativeLayout>
