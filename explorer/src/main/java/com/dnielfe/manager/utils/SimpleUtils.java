@@ -180,8 +180,8 @@ public class SimpleUtils {
 
         String temp = filePath.substring(0, filePath.lastIndexOf("/"));
         File dest = new File(temp + "/" + newName);
-        //if(dest.exists())
-            //return false;
+        if(dest.exists())
+            return false;
         if (src.renameTo(dest)) {
             return true;
         } else {
